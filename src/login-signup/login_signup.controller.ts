@@ -17,6 +17,7 @@ export class Login_signupController {
                 token=value[0].token;
             })
         } catch (err) {
+            console.log(err)
             throw new HttpException('User is Already Exists!!', HttpStatus.NOT_FOUND);
         }
         return token;

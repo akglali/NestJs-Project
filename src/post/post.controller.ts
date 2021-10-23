@@ -20,7 +20,6 @@ export class PostController {
         } catch (error) {
             throw new HttpException('Something Went wrong!!', HttpStatus.NOT_FOUND);
         }
-
         return "Post Is created";
     }
 

@@ -7,6 +7,9 @@ import {ConfigModule} from "@nestjs/config";
 import {DatabaseModule} from "./database/database.module";
 import {PostController} from "./post/post.controller";
 import {PostService} from "./post/post.service";
+import {CommentController} from "./comment/comment.controller";
+import {CommentService} from "./comment/comment.service";
+import {RandomCreator} from "./helpers/randomCreator";
 
 @Module({
   imports: [
@@ -15,7 +18,7 @@ import {PostService} from "./post/post.service";
           envFilePath:['../.env'],
       }),DatabaseModule
   ],
-  controllers: [AppController,Login_signupController,PostController],
-  providers: [AppService,login_signupService,PostService],
+  controllers: [AppController,Login_signupController,PostController,CommentController],
+  providers: [AppService,login_signupService,PostService,CommentService,RandomCreator],
 })
 export class AppModule {}

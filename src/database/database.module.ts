@@ -8,7 +8,7 @@ const databasePool =async ()=>{
     return new Pool({
         user:'postgres',
         host:'localhost',
-        database:'PutYourDatabaseName',
+        database:'vibraninlydb',
         port:5432,
     });
 };

@@ -19,9 +19,7 @@ export class login_signupService {
     }
 
     login(username:string){
-
         return this.query.executeQuery("select password,token from users where username=$1",[username])
-
     }
 
     checkPassword(pass:string,hash:string):boolean{
