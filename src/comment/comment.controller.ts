@@ -9,7 +9,7 @@ export class CommentController{
 
     @Post("/comment")
     async addComment(@Body() com:SendComment, @Headers('token') token){
-        return  this.comment.commentFunc(token,com.postId,com.textField);
+        return await this.comment.commentFunc(token,com.postId,com.textField);
     }
 
 
